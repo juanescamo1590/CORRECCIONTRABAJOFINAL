@@ -4,6 +4,11 @@ package clases;
 import java.util.Date;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ *
+ * @author juane
+ */
 @XmlRootElement
 public class cliente {
     private String cedula;
@@ -12,9 +17,20 @@ public class cliente {
     private List<habitacion> habitaciones;
     private String fecha_reserva;
 
+    /**
+     *
+     */
     public cliente() {
     }
 
+    /**
+     *
+     * @param cedula
+     * @param nombre
+     * @param apellido
+     * @param habitaciones
+     * @param fecha_reserva
+     */
     public cliente(String cedula, String nombre, String apellido, List<habitacion> habitaciones, String fecha_reserva) {
         this.cedula = cedula;
         this.nombre = nombre;

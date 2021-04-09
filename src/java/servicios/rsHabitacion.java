@@ -6,11 +6,28 @@ import java.util.List;
 import java.util.ArrayList;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+
+/**
+ *
+ * @author juane
+ */
 @Path("habitacion")
 public class rsHabitacion {
+
+    /**
+     *
+     */
     public static List<cliente> listadeclientes= new ArrayList<>();
+
+    /**
+     *
+     */
     public gestionhabitacion gh= new gestionhabitacion();
     
+    /**
+     *
+     * @return
+     */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<cliente> consultar(){
@@ -18,6 +35,11 @@ public class rsHabitacion {
     return gh.consultar();
     }
     
+    /**
+     *
+     * @param param
+     * @return
+     */
     @GET
     @Path("{parametroconsulta}")
     @Produces({MediaType.APPLICATION_JSON})
@@ -27,6 +49,10 @@ public class rsHabitacion {
         
     }
     
+    /**
+     *
+     * @param c
+     */
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public void insertar(cliente c){
@@ -34,6 +60,10 @@ public class rsHabitacion {
         gh.insertar(c);
     }
     
+    /**
+     *
+     * @param cl
+     */
     @PUT
     @Consumes({MediaType.APPLICATION_JSON})
     public void modificar(cliente cl){
@@ -41,6 +71,10 @@ public class rsHabitacion {
         gh.modificar(cl);
     }
     
+    /**
+     *
+     * @param eliminar
+     */
     @DELETE
     @Path("{parmetroeliminar}")
     public void eliminar(@PathParam ("parmetroeliminar") String eliminar){

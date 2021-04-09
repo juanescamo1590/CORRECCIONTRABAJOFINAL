@@ -1,6 +1,11 @@
 package clases;
 
 import java.util.Date;
+
+/**
+ *
+ * @author juane
+ */
 public class habitacion {
     private Integer numero;
     private Integer piso;
@@ -9,9 +14,21 @@ public class habitacion {
     private String fecha_entrada;
     private String fecha_salida;
 
+    /**
+     *
+     */
     public habitacion() {
     }
 
+    /**
+     *
+     * @param numero
+     * @param piso
+     * @param tipo
+     * @param precio
+     * @param fecha_entrada
+     * @param fecha_salida
+     */
     public habitacion(Integer numero, Integer piso, String tipo, Float precio, String fecha_entrada, String fecha_salida) {
         this.numero = numero;
         this.piso = piso;
